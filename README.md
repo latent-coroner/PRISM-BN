@@ -311,14 +311,6 @@ This code is provided for research and educational purposes.
 
 ---
 
-## Support & Documentation
-
-For detailed information about:
-- **Anonymization process**: See `ANONYMIZATION_README.md`
-- **Specific evaluation metrics**: See individual `*_gen_llama_eval.py` files
-- **Network processing details**: See `extractor.py` docstrings
-
----
 
 ## Contributing
 
