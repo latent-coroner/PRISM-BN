@@ -1,4 +1,4 @@
-# Bayesian Network Dataset Builder
+# PRISM-BN: A Large-Scale Corpus of Parameterized Bayesian Networks Paired with Natural Language
 
 A comprehensive dataset builder and evaluation framework for extracting and validating Bayesian Networks from text using Large Language Models. This repository contains tools for probabilistic graphical model construction and comparative evaluation across multiple LLM backends.
 
