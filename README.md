@@ -110,23 +110,9 @@ All evaluation scripts implement the same 4-pass judgment process:
 
 ### Configuration & Data
 - **`prism_bn.json`**: Reference Bayesian Network used for evaluation
-- **`ANONYMIZATION_README.md`**: Documentation for anonymized code modifications
-- **`ANONYMIZATION_VERIFICATION.txt`**: Verification log of anonymization changes
-
+ 
 ---
 
-## Anonymization for Double-Blind Review
-
-This codebase has been prepared for double-blind peer review with all identifying information replaced by environment variable references:
-
-### What Was Changed
-
-| Category | Original | Anonymized |
-|----------|----------|-----------|
-| **API Keys** | Hardcoded tokens | `os.getenv("HF_TOKEN")`, etc. |
-| **Model Names** | Specific identifiers | `os.getenv("EXTRACTION_MODEL")` |
-| **Output Files** | Model-specific names | `anonymized_eval_results` |
-| **Comments** | Model vendor mentions | Generic references |
 
 ### Required Environment Variables
 
@@ -141,8 +127,7 @@ export EXTRACTION_MODEL="extraction-model"       # Default: "extraction-model"
 export JUDGE_MODEL="judge-model"                 # Default: "judge-model"
 ```
 
-See `ANONYMIZATION_README.md` for detailed anonymization documentation.
-
+ 
 ---
 
 ## Data Format
@@ -272,9 +257,7 @@ python generate_subgraph_text.py --input subgraphs.json
 
 ---
 
-## Verification
-
-To verify no sensitive information remains in the anonymized code:
+ 
 
 ```bash
 # Check for API tokens
@@ -286,7 +269,6 @@ grep -r "sk_[A-Za-z0-9]" *.py        # Should return no results
 grep -r "DeepSeek\|Claude\|GPT-4\|Qwen" *.py | grep -v "^[[:space:]]*#"
 ```
 
-All scripts use environment variables for sensitive configuration. See `ANONYMIZATION_VERIFICATION.txt` for detailed verification logs.
 
 ---
 
@@ -311,21 +293,4 @@ This code is provided for research and educational purposes.
 
 ---
 
-
-## Contributing
-
-For improvements, bug fixes, or contributions:
-1. Test changes with sample data
-2. Verify anonymization is maintained
-3. Update documentation as needed
-
----
-
-## Questions & Issues
-
-If you encounter issues:
-1. Verify all environment variables are set correctly
-2. Check that required Python packages are installed
-3. Ensure API credentials are valid
-4. Review script-specific usage documentation
 
