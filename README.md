@@ -16,7 +16,7 @@ This project implements a pipeline for:
 - **Extraction Pipeline**: Multi-pass extraction of Bayesian Network components (nodes, states, edges, CPD matrices)
 - **Evaluation Framework**: Automated quality assessment using a judge model
 - **Model Comparison**: Standardized evaluation across multiple LLM backends
-- **Anonymization**: Full support for double-blind peer review with environment variable configuration
+
 
 ---
 
