@@ -272,14 +272,6 @@ grep -r "DeepSeek\|Claude\|GPT-4\|Qwen" *.py | grep -v "^[[:space:]]*#"
 
 ---
 
-## Output Files
-
-Each evaluation script generates:
-- `anonymized_eval_results/` - Detailed evaluation results per pass
-- `anonymized_result_analysis/` - Aggregated analysis and statistics
-- CSV files with comparative metrics
-
----
 
 ## Citation
 
